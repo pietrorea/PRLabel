@@ -21,13 +21,13 @@
 
 @implementation PRViewController
 
-- (void)viewDidLoad
-{
+- (void)viewDidLoad {
     [super viewDidLoad];
     
     self.datePicker = [[UIDatePicker alloc] init];
     self.dateLabel.inputView = self.datePicker;
     self.dateLabel.inputAccessoryView = [self accessoryToolbar];
+    [self.datePicker addTarget:self action:@selector(dateChanged) forControlEvents:UIControlEventValueChanged];
     
     self.namePicker = [[UIPickerView alloc] init];
     self.namePicker.dataSource = self;
@@ -37,37 +37,38 @@
     self.pickerLabel.inputAccessoryView = [self accessoryToolbar];
 }
 
-- (void)didReceiveMemoryWarning
-{
+- (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
 }
 
-#pragma mark - UIPicker data source
 
-#pragma mark - UIPicker data source
 
-- (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView
-{
+#pragma mark - UIPickerViewDataSource
+
+- (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView {
     return 1;
 }
 
-- (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component
-{
+- (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component {
     return 5;
 }
 
-#pragma mark - UIPicker delegate
+#pragma mark - UIPickerViewDelegate
 
-- (NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component
-{
+- (NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component {
     NSArray* array = @[@"Alan Turing", @"John von Neumann", @"Edsger W. Dijkstra", @"Donald Knuth", @"Brian Kernighan"];
     
     return array[row];
 }
+
+- (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component {
+    self.pickerLabel.text = [self.namePicker.delegate pickerView:pickerView titleForRow:row forComponent:component];
+    
+}
+
 #pragma mark - Miscellaneous
 
-- (UIToolbar*)accessoryToolbar
-{    
+- (UIToolbar*)accessoryToolbar {    
     //Create and configure toolabr that holds "Done button"
     UIToolbar *toolBar = [[UIToolbar alloc] init];
     toolBar.barStyle = UIBarStyleBlackTranslucent;
@@ -90,6 +91,12 @@
 
 - (void) doneButtonPressed {
     [self.view endEditing:YES];
+}
+
+- (void)dateChanged {
+    NSDateFormatter* dateFormatter = [[NSDateFormatter alloc] init];
+    dateFormatter.dateStyle = NSDateFormatterLongStyle;
+    self.dateLabel.text = [dateFormatter stringFromDate:self.datePicker.date];
 }
 
 @end
