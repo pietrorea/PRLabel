@@ -12,7 +12,7 @@
 @interface PRViewController () <UIPickerViewDataSource, UIPickerViewDelegate>
 
 @property (strong, nonatomic) IBOutlet PRLabel *dateLabel;
-@property (strong, nonatomic) IBOutlet PRLabel *pickerLabel;
+@property (strong, nonatomic) IBOutlet PRLabel *nameLabel;
 
 @property (strong, nonatomic) UIDatePicker* datePicker;
 @property (strong, nonatomic) UIPickerView* namePicker;
@@ -33,8 +33,8 @@
     self.namePicker.dataSource = self;
     self.namePicker.delegate = self;
     self.namePicker.showsSelectionIndicator = YES;
-    self.pickerLabel.inputView = [self namePicker];
-    self.pickerLabel.inputAccessoryView = [self accessoryToolbar];
+    self.nameLabel.inputView = [self namePicker];
+    self.nameLabel.inputAccessoryView = [self accessoryToolbar];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -62,7 +62,7 @@
 }
 
 - (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component {
-    self.pickerLabel.text = [self.namePicker.delegate pickerView:pickerView titleForRow:row forComponent:component];
+    self.nameLabel.text = [self.namePicker.delegate pickerView:pickerView titleForRow:row forComponent:component];
     
 }
 
