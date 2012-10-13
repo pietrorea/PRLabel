@@ -1,0 +1,10 @@
+PRLabel is a UILabel subclass designed to summon a UIDatePicker or UIPickerView on tap. This allows you to change the text in the PRLabel whenever the value in the date picker or picker view changes.
+
+PRLabel solved a very specific problem for me. I wanted to be able to tap on a label, have a picker view come up much like the standard keyboard does, and be able to change the text on the label according to the user's selection in the picker view. This seemingly simple UI specification was tricky to implement because...
+
+- A regular UILabel is not responsive to touch.
+
+- A UITextField comes with a cursor that the user can use to paste in any string rather than choosing from the values provided by the picker view.
+
+PRLabel solves both of those problems. It is responsive to touch and doesn't have a cursor. Simply set the inputView property and you're done.
+
