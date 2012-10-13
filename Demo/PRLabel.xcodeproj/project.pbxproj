@@ -13,13 +13,13 @@
 		FE0F14731606870E00E933B2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE0F14721606870E00E933B2 /* CoreGraphics.framework */; };
 		FE0F14791606870E00E933B2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FE0F14771606870E00E933B2 /* InfoPlist.strings */; };
 		FE0F147B1606870E00E933B2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FE0F147A1606870E00E933B2 /* main.m */; };
-		FE0F147F1606870E00E933B2 /* PRAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FE0F147E1606870E00E933B2 /* PRAppDelegate.m */; };
 		FE0F14811606870E00E933B2 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = FE0F14801606870E00E933B2 /* Default.png */; };
 		FE0F14831606870E00E933B2 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FE0F14821606870E00E933B2 /* Default@2x.png */; };
 		FE0F14851606870E00E933B2 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FE0F14841606870E00E933B2 /* Default-568h@2x.png */; };
-		FE0F14881606870E00E933B2 /* PRViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE0F14871606870E00E933B2 /* PRViewController.m */; };
 		FE0F148B1606870E00E933B2 /* PRViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE0F14891606870E00E933B2 /* PRViewController_iPhone.xib */; };
 		FE0F148E1606870E00E933B2 /* PRViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE0F148C1606870E00E933B2 /* PRViewController_iPad.xib */; };
+		FE1F34451629E5CB002A7339 /* PRViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE1F34441629E5CB002A7339 /* PRViewController.m */; };
+		FE1F34481629E5DA002A7339 /* PRAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FE1F34471629E5DA002A7339 /* PRAppDelegate.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,15 +33,15 @@
 		FE0F14781606870E00E933B2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		FE0F147A1606870E00E933B2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		FE0F147C1606870E00E933B2 /* PRLabel-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PRLabel-Prefix.pch"; sourceTree = "<group>"; };
-		FE0F147D1606870E00E933B2 /* PRAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PRAppDelegate.h; sourceTree = "<group>"; };
-		FE0F147E1606870E00E933B2 /* PRAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PRAppDelegate.m; sourceTree = "<group>"; };
 		FE0F14801606870E00E933B2 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		FE0F14821606870E00E933B2 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		FE0F14841606870E00E933B2 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		FE0F14861606870E00E933B2 /* PRViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PRViewController.h; sourceTree = "<group>"; };
-		FE0F14871606870E00E933B2 /* PRViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PRViewController.m; sourceTree = "<group>"; };
 		FE0F148A1606870E00E933B2 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/PRViewController_iPhone.xib; sourceTree = "<group>"; };
 		FE0F148D1606870E00E933B2 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/PRViewController_iPad.xib; sourceTree = "<group>"; };
+		FE1F34431629E5CB002A7339 /* PRViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PRViewController.h; sourceTree = SOURCE_ROOT; };
+		FE1F34441629E5CB002A7339 /* PRViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PRViewController.m; sourceTree = SOURCE_ROOT; };
+		FE1F34461629E5DA002A7339 /* PRAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PRAppDelegate.h; sourceTree = SOURCE_ROOT; };
+		FE1F34471629E5DA002A7339 /* PRAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PRAppDelegate.m; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,13 +64,14 @@
 				FE005FA6160F7D0100EF4672 /* PRLabel.h */,
 				FE005FA7160F7D0100EF4672 /* PRLabel.m */,
 			);
-			path = Classes;
+			name = Classes;
+			path = ../Classes;
 			sourceTree = "<group>";
 		};
 		FE0F145F1606870E00E933B2 = {
 			isa = PBXGroup;
 			children = (
-				FE0F14741606870E00E933B2 /* PRLabel */,
+				FE0F14741606870E00E933B2 /* Demo */,
 				FE005F9D160F7C4900EF4672 /* Classes */,
 				FE0F146D1606870E00E933B2 /* Frameworks */,
 				FE0F146B1606870E00E933B2 /* Products */,
@@ -95,18 +96,18 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		FE0F14741606870E00E933B2 /* PRLabel */ = {
+		FE0F14741606870E00E933B2 /* Demo */ = {
 			isa = PBXGroup;
 			children = (
-				FE0F147D1606870E00E933B2 /* PRAppDelegate.h */,
-				FE0F147E1606870E00E933B2 /* PRAppDelegate.m */,
-				FE0F14861606870E00E933B2 /* PRViewController.h */,
-				FE0F14871606870E00E933B2 /* PRViewController.m */,
+				FE1F34461629E5DA002A7339 /* PRAppDelegate.h */,
+				FE1F34471629E5DA002A7339 /* PRAppDelegate.m */,
+				FE1F34431629E5CB002A7339 /* PRViewController.h */,
+				FE1F34441629E5CB002A7339 /* PRViewController.m */,
 				FE0F14891606870E00E933B2 /* PRViewController_iPhone.xib */,
 				FE0F148C1606870E00E933B2 /* PRViewController_iPad.xib */,
 				FE0F14751606870E00E933B2 /* Supporting Files */,
 			);
-			path = PRLabel;
+			name = Demo;
 			sourceTree = "<group>";
 		};
 		FE0F14751606870E00E933B2 /* Supporting Files */ = {
@@ -192,9 +193,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				FE0F147B1606870E00E933B2 /* main.m in Sources */,
-				FE0F147F1606870E00E933B2 /* PRAppDelegate.m in Sources */,
-				FE0F14881606870E00E933B2 /* PRViewController.m in Sources */,
 				FE005FA8160F7D0100EF4672 /* PRLabel.m in Sources */,
+				FE1F34451629E5CB002A7339 /* PRViewController.m in Sources */,
+				FE1F34481629E5DA002A7339 /* PRAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,8 +284,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "PRLabel/PRLabel-Prefix.pch";
-				INFOPLIST_FILE = "PRLabel/PRLabel-Info.plist";
+				GCC_PREFIX_HEADER = "PRLabel-Prefix.pch";
+				INFOPLIST_FILE = "$(SRCROOT)/PRLabel-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -294,8 +295,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "PRLabel/PRLabel-Prefix.pch";
-				INFOPLIST_FILE = "PRLabel/PRLabel-Info.plist";
+				GCC_PREFIX_HEADER = "PRLabel-Prefix.pch";
+				INFOPLIST_FILE = "$(SRCROOT)/PRLabel-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
