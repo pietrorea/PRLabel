@@ -25,6 +25,7 @@
     [super viewDidLoad];
     
     self.datePicker = [[UIDatePicker alloc] init];
+    self.datePicker.datePickerMode = UIDatePickerModeDate;
     self.dateLabel.inputView = self.datePicker;
     self.dateLabel.inputAccessoryView = [self accessoryToolbar];
     [self.datePicker addTarget:self action:@selector(dateChanged) forControlEvents:UIControlEventValueChanged];
